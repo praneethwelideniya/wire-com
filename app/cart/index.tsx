@@ -39,48 +39,6 @@ export default function CartScreen() {
     router.push("/checkout");
   };
 
-  // const renderItem = ({ item }) => (
-  //   <View style={styles.itemContainer}>
-  //     <Image
-  //       source={{ uri: item.mainImage }}
-  //       style={styles.image}
-  //       contentFit="cover"
-  //     />
-  //     <View style={styles.itemInfo}>
-  //       <Text style={[styles.itemName, { color: theme.text }]}>
-  //         {item.name}
-  //       </Text>
-  //       <Text style={{ color: theme.text }}>
-  //         Size: {item.selectedSize || "N/A"}
-  //       </Text>
-  //       <FontAwesome5
-  //         name="edit"
-  //         size={20}
-  //         color={theme.baseColor}
-  //         onPress={() => handleEditItem(item.id)}
-  //       />
-  //       <Text style={styles.itemPrice}>
-  //         {item.price.currency} {item.price.amount}
-  //       </Text>
-  //     </View>
-  //     <View style={styles.itemActions}>
-  //       <Feather
-  //         name="trash-2"
-  //         size={24}
-  //         color={theme.baseColor}
-  //         onPress={() => removeItem(item.id)}
-  //         style={styles.removeButton}
-  //       />
-
-  //       <QuantityAdjuster
-  //         quantity={item.quantity}
-  //         onIncrease={() => updateItemQuantity(item.id, item.quantity + 1)}
-  //         onDecrease={() => updateItemQuantity(item.id, item.quantity - 1)}
-  //       />
-  //     </View>
-  //   </View>
-  // );
-
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Cart ({totalItems} items)</Text>
