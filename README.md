@@ -25,26 +25,45 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
+## Technologies and Libraries Used
 
-When you're ready, run:
+### Core
 
-```bash
-npm run reset-project
-```
+- **Language**: TypeScript
+- **Framework**: React Native with Expo
+  - Expo is used as it provides the most recommended way to develop React Native apps, offering a smooth development experience and easy-to-use tools.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Navigation
 
-## Learn more
+- **expo-router**
+  - We chose expo-router for navigation as it provides file-based routing, making it intuitive and easy to manage navigation structure. It's also fully integrated with Expo, ensuring seamless compatibility.
 
-To learn more about developing your project with Expo, look at the following resources:
+### State Management
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- **Zustand**
+  - For this small e-commerce project, Zustand was selected as the state management solution. It's lightweight, easy to set up, and doesn't require extensive boilerplate code, making it perfect for our needs.
 
-## Join the community
+### Data Persistence
 
-Join our community of developers creating universal apps.
+- **@react-native-async-storage/async-storage**
+  - Used in conjunction with Zustand to persist state data, ensuring that important information like cart contents are saved between app sessions.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### API Calls
+
+- **Axios**
+  - Chosen for making HTTP requests due to its simplicity and powerful features, including request and response interceptors.
+
+### Image Handling
+
+- **expo-image**
+  - Utilized for efficient image loading and caching, providing better performance compared to the standard React Native Image component.
+
+### Form Handling
+
+- **react-hook-form**
+  - Employed for managing form state and validation, offering a performant solution with minimal re-renders.
+
+### Form Validation
+
+- **Zod**
+  - Used alongside react-hook-form for robust form validation, providing a type-safe approach to defining validation schemas.
